@@ -1,0 +1,60 @@
+\documentclass[12 pt]{article}
+\usepackage{amsfonts, amssymb}
+  
+
+\oddsidemargin=-0.5cm
+\setlength{\textwidth}{6.5in}
+\addtolength{\voffset}{-20pt}
+\addtolength{\headsep}{25pt}
+
+
+\pagestyle{myheadings}
+\markright{Maciej Wiśniewski \hfill \today \hfill} 
+
+
+\begin{document}
+
+\section{Problem 1.}
+\section{Problem 2.}
+Since $X$ is pof, it is orbit-finite. 
+Since given relation is equivariant, each orbit of $X$ is either entirely contained within one
+equivalence class or each element of the orbit is in a different equivalence class. \\
+
+\noindent
+If the first case holds for every orbit, then every equivalence class is a union of orbits, therefore:
+\begin{itemize}
+    \item There are finitely many equivalence classes.
+    \item Each equivalence class is equivariant.
+\end{itemize}
+
+\noindent
+If the second case holds for at least one orbit, than:
+\begin{itemize}
+    \item There are infinitely many equivalence classes (because an orbit has one or infinitely many elements and if it had only one, the first case would hold).
+    \item Not every equivalence class is equivariant, because elements of the same orbit are by definition equivariantly indistinguishable.
+\end{itemize}
+
+$T.H.M.W.$
+
+\section{Problem 3.}
+
+Note that such function $f$ exists if and only if every orbit (orbit generating element) of $X$ is in a relation with an oribt of $Y$ that does not introduce
+new atoms (ones that were not used in the $X$'s orbit generating element). \\
+
+\noindent
+\textbf{Proof:} If for every relation of given orbit of $X$ ($O$) it would introduce new atoms, than $f$ would have to create new atoms,
+and since it has to be equivariant we could only take all atoms or none of them, meaning $f(O)$ doesn't exist or has infinitely many possible values,
+therefore $f$ is not a function.\\
+
+\noindent
+With that we iterate over all orbits of $X \times Y$ ignoring the ones that are not in $R$ ($R$ is an equivariant subset of $X \times Y$) and
+if the given orbit (let's call the $X$ part $O_x$ and the $Y$ part $O_y$) satisfies the condition that $O_y$ does not introduce new atoms, we
+mark $O_x$ as an orbit for which $f$ exists. \\
+
+\noindent
+Lastly, we check for every orbit of $X$ if $f$ exists for it. Described algorithm will terminate because we operate on pof sets, which are orbit-finite.
+
+$T.H.M.W.$
+
+
+\end{document}
